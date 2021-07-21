@@ -8,8 +8,8 @@ const application = Application.start()
 const context = require.context("controllers", true, /_controller\.(js|ts)$/)
 application.load(definitionsFromContext(context))
 
-const componentContext = require.context("../../components/", true, /(.*)\/.+\.js$/);
 try {
+  const componentContext = require.context("../../components/", true, /(.*)\/.+\.js$/);
   application.load(definitionsFromContext(componentContext));
 }
 catch (e) {

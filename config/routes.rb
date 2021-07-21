@@ -1,12 +1,14 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
-authenticate :user, lambda { |u| u.admin? } do
-  mount Sidekiq::Web => '/sidekiq'
+  authenticate :user, lambda { |u| u.admin? } do
+    mount Sidekiq::Web => '/sidekiq'
 
-  namespace :madmin do
+    namespace :madmin do
+    end
   end
-end
+
+  get '/:locale' => 'home#index'
 
   devise_for :users
   root to: 'home#index'

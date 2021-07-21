@@ -31,3 +31,5 @@
 
 en:
   hello: "Hello world"
+  basic_link: "Basic link"
+  welcome_title: "Welcome to Boostup Tailwind!"

@@ -64,3 +64,6 @@ gem 'sitemap_generator', '~> 6.1', '>= 6.1.2'
 gem 'whenever', require: false
 gem 'view_component', require: 'view_component/engine'
 gem 'hotwire-rails'
+
+# Cloudinary
+gem 'cloudinary'

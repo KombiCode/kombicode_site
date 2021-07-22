@@ -1,5 +1,7 @@
-<h1>New Contact</h1>
-
-<%= render 'form', contact: @contact %>
-
-<%= link_to 'Back', contacts_path %>
+<%= turbo_frame_tag 'contact_modal' do %>
+  <turbo-stream target="contact_form" action="replace">
+    <template>
+      <%= render partial: "form", locals: { contact: @contact } %>
+    </template>
+  </turbo-stream>
+<% end %>

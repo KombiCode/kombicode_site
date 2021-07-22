@@ -34,3 +34,14 @@ en:
   basic_link: "Basic link"
   welcome_title: "Welcome to Boostup Tailwind!"
   no_admin_allowed: "Sorry, no admin access for you."
+  thanks_for_interest: "Thank you for your interest!"
+  ask_for_info: "I need just a bit of information from you and I will gladly be in touch with you as soon as possible"
+
+  activerecord:
+    models:
+      contact: 'Contact'
+    attributes:
+      contact:
+        name: 'Name'
+        email: 'Email'
+        phone: 'Phone Number'

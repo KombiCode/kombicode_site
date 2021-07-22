@@ -3,3 +3,14 @@ fr:
   basic_link: "Lien basique"
   welcome_title: "Bienvenue dans Stimulez Tailwind!"
   no_admin_allowed: "Désolé, pas d'accès administrateur pour vous."
+  thanks_for_interest: "Merci pour votre intérêt!"
+  ask_for_info: "J'ai besoin d'un peu d'informations de votre part et je me ferai un plaisir de vous contacter dans les plus brefs délais"
+
+  activerecord:
+    models:
+      contact: 'Contact'
+    attributes:
+      contact:
+        name: 'Nom'
+        email: 'Email'
+        phone: 'Numéro de téléphone'  

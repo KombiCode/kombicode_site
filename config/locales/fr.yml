@@ -2,3 +2,4 @@ fr:
   hello: "Bonjour le monde"
   basic_link: "Lien basique"
   welcome_title: "Bienvenue dans Stimulez Tailwind!"
+  no_admin_allowed: "Désolé, pas d'accès administrateur pour vous."

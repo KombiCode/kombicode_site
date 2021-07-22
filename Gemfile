@@ -67,3 +67,5 @@ gem 'hotwire-rails'
 
 # Cloudinary
 gem 'cloudinary'
+gem 'rails_admin'
+gem 'rails_admin-i18n'

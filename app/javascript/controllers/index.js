@@ -14,3 +14,6 @@ try {
 }
 catch (e) {
 }
+
+import { Modal } from "tailwindcss-stimulus-components"
+application.register('modal', Modal)

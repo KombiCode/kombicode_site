@@ -13,6 +13,10 @@ class ApplicationController < ActionController::Base
     { locale: I18n.locale }
   end
 
+  def render_flash
+    render turbo_stream: turbo_stream.update("flash_notice", partial: "shared/flash_notice")
+  end
+
   protected
 
     def configure_permitted_parameters

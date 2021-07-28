@@ -13,4 +13,17 @@ fr:
       contact:
         name: 'Nom'
         email: 'Email'
-        phone: 'Numéro de téléphone'  
+        phone: 'Numéro de téléphone'
+    errors:
+      models:
+        contact:
+          attributes:
+            name:
+              format: "Le nom %{message}"
+              blank: 'doit être renseigné'
+            email:
+              format: "L'email %{message}"
+              blank: 'doit être renseigné'
+            messages:
+              format: "Veuillez %{message}"
+              blank: 'indiquer votre message'

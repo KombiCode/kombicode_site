@@ -45,3 +45,16 @@ en:
         name: 'Name'
         email: 'Email'
         phone: 'Phone Number'
+    errors:
+      models:
+        contact:
+          attributes:
+            name:
+              format: "Name %{message}"
+              blank: 'cannot be blank'
+            email:
+              format: "Email %{message}"
+              blank: 'cannot be blank'
+            messages:
+              format: "Message %{message}"
+              blank: 'cannot be blank'

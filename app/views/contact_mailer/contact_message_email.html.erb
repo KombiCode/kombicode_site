@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1><%= @contact.name %> has visited Kombicode site and sent the below message</h1>
+    <p>
+      <%= @contact.messages.first.body %>
+    </p>
+  </body>
+</html>

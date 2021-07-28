@@ -48,7 +48,8 @@ class ContactsController < ApplicationController
       # format.html { redirect_to @contact, notice: "Contact was successfully created." }
       # format.json { render :show, status: :created, location: @contact }
     else
-      puts "Failed to save contact"
+      # need to 'rebuild' messages area
+      @contact.messages.build
       render turbo_stream: turbo_stream.replace(
         'contact_form',
         partial: 'form',

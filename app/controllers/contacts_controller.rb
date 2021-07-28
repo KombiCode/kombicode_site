@@ -24,31 +24,12 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
 
-    # if @contact.save
-    #   render turbo_stream: turbo_stream.append(
-    #     'contacts',
-    #     partial: 'contact',
-    #     locals: {
-    #       contact: @contact
-    #     }
-    #   )
-    # else
-    #   render turbo_stream: turbo_stream.replace(
-    #     'contact_form',
-    #     partial: 'form',
-    #     locals: {
-    #       contact: @contact
-    #     }
-    #   ), status: :unprocessable_entity
-    # end
     if @contact.save
       flash.now[:notice] = "Contact was successfully created."
       render turbo_stream: turbo_stream.update("flash_notice", partial: "shared/flash_notice")
-      # puts "Contact saved"
-      # format.html { redirect_to @contact, notice: "Contact was successfully created." }
-      # format.json { render :show, status: :created, location: @contact }
     else
-      puts "Failed to save contact"
+      # need to 'rebuild' messages area
+      @contact.messages.build
       render turbo_stream: turbo_stream.replace(
         'contact_form',
         partial: 'form',
@@ -56,8 +37,6 @@ class ContactsController < ApplicationController
           contact: @contact
         }
       ), status: :unprocessable_entity
-      # format.html { render :new, status: :unprocessable_entity }
-      # format.json { render json: @contact.errors, status: :unprocessable_entity }
     end
   end
 

@@ -27,7 +27,7 @@ class ContactsController < ApplicationController
     if @contact.save
       flash.now[:notice] = "Contact was successfully created."
       render turbo_stream: turbo_stream.update("flash_notice", partial: "shared/flash_notice")
-      ContactMailer.with(contact: @contact).contact_message_email.deliver_now
+      ContactMailer.with(contact: @contact).contact_message_email.deliver_later
     else
       # need to 'rebuild' messages area
       @contact.messages.build

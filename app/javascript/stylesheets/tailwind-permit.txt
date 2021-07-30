@@ -1,0 +1,13 @@
+inset-x-0
+top-0
+left-0
+h-full
+hidden
+animated
+fadeIn
+fixed
+inset-0
+overflow-y-auto
+flex
+items-center
+justify-center

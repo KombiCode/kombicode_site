@@ -12,4 +12,17 @@ module.exports = {
   },
   variants: {},
   plugins: [],
+
+  // Below are classes we explicitly want to keep no matter what
+  safelist: [
+    'hidden',
+    'animated',
+    'fadeIn',
+    'fixed',
+    'inset-0',
+    'overflow-y-auto',
+    'flex',
+    'items-center',
+    'justify-center'
+  ]
 }

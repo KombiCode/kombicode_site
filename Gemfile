@@ -67,5 +67,8 @@ gem 'hotwire-rails'
 
 # Cloudinary
 gem 'cloudinary'
+# Admin
 gem 'rails_admin'
 gem 'rails_admin-i18n'
+# Postmark
+gem 'postmark-rails'

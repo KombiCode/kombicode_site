@@ -1,5 +1,5 @@
 <%= form_with(model: @contact, id: "contact_form", data: { extended_modal_target: 'form' }) do |form| %>
-  <div class="px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+    <div class="px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
     <% if @contact.errors.any? %>
       <div class="p-4 border border-red-600" data-extended-modal-target="errors">
         <ul>

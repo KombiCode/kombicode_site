@@ -36,6 +36,8 @@ en:
   no_admin_allowed: "Sorry, no admin access for you."
   thanks_for_interest: "Thank you for your interest!"
   ask_for_info: "I need just a bit of information from you and I will gladly be in touch with you as soon as possible"
+  send_message: "Send message"
+  cancel: "Cancel"
 
   activerecord:
     models:

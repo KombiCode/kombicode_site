@@ -1,5 +1,5 @@
 <header class="mb-4">
-  <nav class="flex flex-wrap items-center justify-between px-3 py-3 text-gray-700 bg-black lg:px-10">
+  <nav class="flex flex-wrap items-center justify-between px-10 py-3 text-gray-700 bg-black">
 
     <div class="flex items-center mr-6 flex-no-shrink">
       <%= link_to "/", class: "logo w-10" do %>
@@ -7,11 +7,11 @@
       <% end %>
     </div>
 
-    <div class="items-center block w-full mt-2 text-center lg:flex lg:flex-row lg:flex-1 lg:mt-0 lg:text-right mr-10 lg:justify-end">
+    <div class="flex flex-row items-center justify-end mt-0 mr-10 text-right">
       <%= turbo_frame_tag 'contact_modal' %>
-      <div class="lg:flex-grow" data-controller="extended-modal" data-extended-modal-prevent-default-action-opening="false">
+      <div class="flex-grow" data-controller="extended-modal" data-extended-modal-prevent-default-action-opening="false">
         <%= render 'contacts/modal'%>
-        <%= link_to "thierry.jet@kombicode.com", new_contact_path, class: "navbar-text block mt-4 lg:inline-block lg:mt-0 lg:mr-4 mb-2 lg:mb-0 lin", data: { action: "click->extended-modal#open", 'turbo-frame': 'contact_modal' } %>
+        <%= link_to "thierry.jet@kombicode.com", new_contact_path, class: "navbar-text inline-block mt-0 mr-4 mb-0 lin", data: { action: "click->extended-modal#open", 'turbo-frame': 'contact_modal' } %>
       </div>
     </div>
   </nav>

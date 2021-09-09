@@ -13,6 +13,23 @@ p {
   font-family: 'Roboto Slab';
 }
 
+.bodycontent p {
+  color: black;
+}
+
+.interest {
+  color: $kombi-kansasrot;
+  text-align: left;
+}
+
+.interest-link {
+  color: $kombi-kansasrot;
+  text-align: right;
+  &:hover {
+    color: white;
+  }
+}
+
 .modalcontent {
   font-family: 'Roboto Slab';
 }

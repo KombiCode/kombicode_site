@@ -1,7 +1,13 @@
-<div class="max-w-xl mx-auto mt-16 text-left">
+<div class="max-w-2xl mx-auto mt-16 text-left">
   <h1 class="mb-4 text-3xl font-black"><%= t('my_name') %></h1>
   <p class="text-lg leading-snug"><%= t('job_title') %></p>
   <p class="mt-8 text-lg leading-snug"><%= t('introducing_one') %></p>
   <p class="text-lg leading-snug"><%= t('introducing_two') %></p>
-  <p class="mt-8 text-lg leading-snug text-right"><%= t('interest_on_wt') %></p>
+  <p class="mt-8 text-lg leading-snug text-right interest"><%= t('interest_on_wt') %></p>
+      <%= turbo_frame_tag 'contact_modal' %>
+      <div class="flex-grow" data-controller="extended-modal" data-extended-modal-prevent-default-action-opening="false">
+        <%= render 'contacts/modal'%>
+        <i class="fas fa-arrow-right"></i>
+        <%= link_to "thierry.jet@kombicode.com", new_contact_path, class: "interest-link inline-block mt-0 mr-4 mb-0 lin", data: { action: "click->extended-modal#open", 'turbo-frame': 'contact_modal' } %>
+      </div>
 </div>

@@ -1,7 +1,9 @@
 fr:
-  hello: "Bonjour le monde"
-  basic_link: "Lien basique"
-  welcome_title: "Bienvenue dans Stimulez Tailwind!"
+  my_name: "Thierry JET"
+  job_title: "Développeur Ruby On Rails fullstack - région de Grenoble "
+  introducing_one: "Je suis ingénieur logiciel avec une grande expérience dans la conception, le développement et le test dans de multiples domaines."
+  introducing_two: "Je développe désormais des applications Web et je suis disponible pour contribuer à la réalisation de vos projets!"
+  interest_on_wt: "Interessé pour travailler ensemble?"
   no_admin_allowed: "Désolé, pas d'accès administrateur pour vous."
   thanks_for_interest: "Merci pour votre intérêt!"
   ask_for_info: "J'ai besoin d'un peu d'informations de votre part et je me ferai un plaisir de vous contacter dans les plus brefs délais"

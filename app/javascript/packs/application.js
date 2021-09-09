@@ -12,5 +12,7 @@ Rails.start()
 ActiveStorage.start()
 
 //css 
+import 'stylesheets/googlefonts'
+import 'stylesheets/tailwind'
 import 'stylesheets/application'
 import "controllers"

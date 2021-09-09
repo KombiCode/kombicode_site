@@ -1,6 +1,13 @@
+$kombi-kansasrot: #9e261c;
+$kombi-pastelweiss: #e8e4c7;
 
 p {
-  color: rgb(16, 120, 146);
+  // color: rgb(16, 120, 146);
   font-family: 'Halant';
   font-weight: 700;
+}
+
+.bodycontent {
+  background-color: $kombi-pastelweiss;
+  color: $kombi-kansasrot;
 }

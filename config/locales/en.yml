@@ -30,9 +30,11 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
-  basic_link: "Basic link"
-  welcome_title: "Welcome to Boostup Tailwind!"
+  my_name: "Thierry JET"
+  job_title: "Ruby On Rails fullstack developer - around Grenoble - France"
+  introducing_one: "I'm a software engineer with thorough hands-on experience in conception, development and test in multiple fields."
+  introducing_two: "Now I develop Web apps and I'm available to help you on your projects!"
+  interest_on_wt: "Interested in working together?"
   no_admin_allowed: "Sorry, no admin access for you."
   thanks_for_interest: "Thank you for your interest!"
   ask_for_info: "I need just a bit of information from you and I will gladly be in touch with you as soon as possible"

@@ -32,7 +32,7 @@ export default class ExtendedModal extends Modal {
       // The rest should be enough
       this.formTarget.reset();
       // Therefore after errors the reset seems to not work properly, so force values to be blanked
-      const container = document.querySelector("#contact_main_form");
+      const container = document.querySelector("#contact_form");
       if (container) {
         const matches = container.querySelectorAll("input.input");
         matches.forEach(function(userInput) {

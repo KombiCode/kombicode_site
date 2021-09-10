@@ -1,7 +1,15 @@
 <%= turbo_frame_tag 'contact_modal' do %>
   <turbo-stream target="contact_form" action="replace">
     <template>
-      <%= render partial: "form", locals: { contact: @contact } %>
+      <%= render partial: "form", locals: { contact: @contact, from: @from } %>
+    </template>
+  </turbo-stream>
+<% end %>
+
+<%= turbo_frame_tag 'contact_main_modal' do %>
+  <turbo-stream target="contact_main_form" action="replace">
+    <template>
+      <%= render partial: "mainform", locals: { contact: @contact, from: @from } %>
     </template>
   </turbo-stream>
 <% end %>

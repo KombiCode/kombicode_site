@@ -12,6 +12,9 @@ class ContactsController < ApplicationController
 
   # GET /contacts/new
   def new
+    @from = params[:from]
+    @@from = params[:from]
+    puts "Instance : #{self}, method new, @from = #{@from}, @@from = #{@@from}"
     @contact = Contact.new
     @contact.messages.build
   end
@@ -22,6 +25,7 @@ class ContactsController < ApplicationController
 
   # POST /contacts or /contacts.json
   def create
+    puts "Instance : #{self}, method create, @from = #{@from}, @@from = #{@@from}"
     @contact = Contact.new(contact_params)
 
     if @contact.save
@@ -31,13 +35,24 @@ class ContactsController < ApplicationController
     else
       # need to 'rebuild' messages area
       @contact.messages.build
-      render turbo_stream: turbo_stream.replace(
-        'contact_form',
-        partial: 'form',
-        locals: {
-          contact: @contact
-        }
-      ), status: :unprocessable_entity
+      # render depending of where it comes from
+      if @@from == "navbar"
+        render turbo_stream: turbo_stream.replace(
+          'contact_form',
+          partial: 'form',
+          locals: {
+            contact: @contact
+          }
+        ), status: :unprocessable_entity
+      else
+        render turbo_stream: turbo_stream.replace(
+          'contact_main_form',
+          partial: 'mainform',
+          locals: {
+            contact: @contact
+          }
+        ), status: :unprocessable_entity
+      end
     end
   end
 

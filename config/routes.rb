@@ -3,7 +3,10 @@ require 'sidekiq/web'
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :messages
-  resources :contacts
+  # resources :contacts
+
+  resources :contacts, path_names: {new: 'new/:from' }
+
   authenticate :user, lambda { |u| u.admin? } do
     mount Sidekiq::Web => '/sidekiq'
 

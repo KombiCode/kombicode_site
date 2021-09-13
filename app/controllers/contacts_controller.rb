@@ -13,8 +13,6 @@ class ContactsController < ApplicationController
   # GET /contacts/new
   def new
     @from = params[:from]
-    @@from = params[:from]
-    puts "Instance : #{self}, method new, @from = #{@from}, @@from = #{@@from}"
     @contact = Contact.new
     @contact.messages.build
   end
@@ -25,7 +23,6 @@ class ContactsController < ApplicationController
 
   # POST /contacts or /contacts.json
   def create
-    puts "Instance : #{self}, method create, @from = #{@from}, @@from = #{@@from}"
     @contact = Contact.new(contact_params)
 
     if @contact.save
@@ -36,7 +33,7 @@ class ContactsController < ApplicationController
       # need to 'rebuild' messages area
       @contact.messages.build
       # render depending of where it comes from
-      if @@from == "navbar"
+      if @contact.input_from == "navbar"
         render turbo_stream: turbo_stream.replace(
           'contact_form',
           partial: 'form',
@@ -86,6 +83,6 @@ class ContactsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def contact_params
-      params.require(:contact).permit(:name, :email, :phone, messages_attributes: [:body])
+      params.require(:contact).permit(:name, :email, :phone, :input_from, messages_attributes: [:body])
     end
 end

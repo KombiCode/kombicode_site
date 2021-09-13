@@ -33,6 +33,11 @@ class ContactsController < ApplicationController
       render turbo_stream: turbo_stream.update("flash_notice", partial: "shared/flash_notice")
       ContactMailer.with(contact: @contact).contact_message_email.deliver_now
     else
+      puts "Save failed : #{self} - #{@@from}"
+      @contact.errors.full_messages.each do |message|
+        p message
+      end
+  
       # need to 'rebuild' messages area
       @contact.messages.build
       # render depending of where it comes from

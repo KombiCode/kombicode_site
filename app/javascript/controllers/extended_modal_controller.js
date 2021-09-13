@@ -1,16 +1,14 @@
 import { Modal } from "tailwindcss-stimulus-components"
 
 export default class ExtendedModal extends Modal {
-  static targets = ["form", "errors"];
+  static targets = ["form", "errors", "mainform", "mainerrors"];
   static values = { from: Number }
 
   connect() {
-    console.log(`EMC connect ${this}`);
     super.connect();
   }
 
   open(e) {
-    console.log(`EMC open ${this.fromValue}`);
     super.open(e);
     // Always want to clear errors on open
     this.clearErrors();
@@ -19,21 +17,21 @@ export default class ExtendedModal extends Modal {
   }
 
   handleSuccess({ detail: { success } }) {
-    console.log(`EMC handleSuccess ${this}`);
     if (success) {
       super.close();
     }
   }
 
   clearErrors() {
-    console.log(`EMC clearErrors ${this}`);
     if (this.hasErrorsTarget) {
       this.errorsTarget.remove();
+    }
+    if (this.hasMainerrorsTarget) {
+      this.mainerrorsTarget.remove();
     }
   }
 
   resetValues() {
-    console.log(`EMC resetValues ${this}`);
     if (this.hasFormTarget) {
       // The rest should be enough
       this.formTarget.reset();
@@ -42,7 +40,23 @@ export default class ExtendedModal extends Modal {
       if (container) {
         const matches = container.querySelectorAll("input.input");
         matches.forEach(function(userInput) {
-          userInput.value = "";
+          if (userInput.id != "contact_input_from") {
+            userInput.value = "";
+          }
+        });
+      }
+    }
+    if (this.hasMainformTarget) {
+      // The rest should be enough
+      this.mainformTarget.reset();
+      // Therefore after errors the reset seems to not work properly, so force values to be blanked
+      const container = document.querySelector("#contact_main_form");
+      if (container) {
+        const matches = container.querySelectorAll("input.input");
+        matches.forEach(function(userInput) {
+          if (userInput.id != "contact_input_from") {
+            userInput.value = "";
+          }
         });
       }
     }

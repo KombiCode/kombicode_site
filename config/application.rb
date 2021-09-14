@@ -26,5 +26,7 @@ module KombicodeSite
     config.i18n.default_locale = :en
 
     config.active_model.i18n_customize_full_message = true
+
+    config.exceptions_app = self.routes # Add this line
   end
 end

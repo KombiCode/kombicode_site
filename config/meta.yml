@@ -1,4 +1,4 @@
 meta_product_name: "KombiCode"
 meta_title: "KombiCode - Freelance for your Ruby On Rails projects !"
 meta_description: "KombiCode, freelance fullstack developer. Software engineer, I'm available. Contact me for any Ruby On Rails project !"
-meta_image: "KombiCode_banner.png" # should exist in `app/assets/images/`
+meta_image: "KombiCode-banner.png" # should exist in `app/assets/images/`

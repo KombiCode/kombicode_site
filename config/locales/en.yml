@@ -41,6 +41,8 @@ en:
   send_message: "Send message"
   cancel: "Cancel"
 
+  message_sent: "Your message was successfully sent."
+
   error_not_found_title: "Page not found"
   error_not_found_content: "Looks like you've followed a broken link or entered a URL that doesn't exist on this site."
   error_internal_server_error_title: "Server error"

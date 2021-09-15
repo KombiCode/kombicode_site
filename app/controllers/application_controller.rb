@@ -5,8 +5,12 @@ class ApplicationController < ActionController::Base
   around_action :switch_locale
 
   def switch_locale(&action)
-    locale = params[:locale] || I18n.default_locale
-    I18n.with_locale(locale, &action)
+    begin
+      locale = params[:locale] || I18n.default_locale
+      I18n.with_locale(locale, &action)
+      rescue Exception => e
+        render "errors/not_found"
+      end
   end
 
   def default_url_options
@@ -23,10 +27,4 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
       devise_parameter_sanitizer.permit(:account_update, keys: [:name])
     end
-end
-
-
-# app/controllers/application_controller.rb
-class ApplicationController < ActionController::Base
-
 end

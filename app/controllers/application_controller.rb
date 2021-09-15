@@ -21,6 +21,10 @@ class ApplicationController < ActionController::Base
     render turbo_stream: turbo_stream.update("flash_notice", partial: "shared/flash_notice")
   end
 
+  def default_url_options
+    { host: ENV["DOMAIN"] || "localhost:5000" || "localhost:3000" }
+  end
+
   protected
 
     def configure_permitted_parameters

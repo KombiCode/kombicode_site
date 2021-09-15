@@ -8,6 +8,9 @@ Bundler.require(*Rails.groups)
 
 module KombicodeSite
   class Application < Rails::Application
+
+    config.exceptions_app = self.routes
+        
     config.active_job.queue_adapter = :sidekiq
     config.application_name = Rails.application.class.module_parent_name
     # Initialize configuration defaults for originally generated Rails version.

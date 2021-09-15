@@ -1,7 +1,7 @@
 <%= form_with(model: @contact, id: "contact_main_form", data: { extended_modal_target: 'mainform' }) do |form| %>
-    <div class="px-4 pt-5 pb-4 text-right sm:p-6 sm:pb-4">
+  <div class="px-4 pt-1 pb-4 sm:pt-5 sm:p-6 sm:pb-4">
     <% if @contact.errors.any? %>
-      <div class="p-4 border border-red-600" data-extended-modal-target="mainerrors">
+      <div class="p-4 text-xs border border-red-600 sm:text-base" data-extended-modal-target="errors">
         <ul>
           <% @contact.errors.full_messages.each do |message| %>
             <li><%= message %></li>
@@ -12,12 +12,12 @@
 
     <div class="form-group">
       <%= form.label :name, class: "label" %>
-      <%= form.text_field :name, class: "input" %>
+      <%= form.text_field :name, autofocus: true, class: "input" %>
     </div>
 
     <div class="form-group">
       <%= form.label :email, class: "label" %>
-      <%= form.email_field :email, autofocus: true, autocomplete: "email", class: "input" %>
+      <%= form.email_field :email, autocomplete: "email", class: "input" %>
     </div>
 
     <div class="form-group">

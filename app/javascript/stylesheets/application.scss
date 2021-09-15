@@ -1,15 +1,30 @@
 $kombi-kansasrot: #9e261c;
 $kombi-pastelweiss: #e8e4c7;
 
-body {
+p {
+  // color: rgb(16, 120, 146);
+  font-family: 'Halant';
+  font-weight: 700;
+}
+
+.bodycontent {
   background-color: $kombi-pastelweiss;
   color: $kombi-kansasrot;
   font-family: 'Roboto Slab';
 }
 
-.interest-link {
+.bodycontent p {
+  color: black;
+}
+
+.interest {
   color: $kombi-kansasrot;
   text-align: left;
+}
+
+.interest-link {
+  color: $kombi-kansasrot;
+  text-align: right;
   &:hover {
     color: white;
   }
@@ -17,7 +32,5 @@ body {
 
 .modalcontent {
   font-family: 'Roboto Slab';
-  color: rgba(55, 65, 81, var(--tw-text-opacity));
 }
 
-// body > header > nav > div.flex.flex-row.items-center.justify-end.mt-0.mr-10.text-right > div > div > div > div > div > i

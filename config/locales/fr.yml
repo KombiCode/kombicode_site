@@ -10,6 +10,12 @@ fr:
   send_message: "Envoyer le message"
   cancel: "Annuler"
 
+  error_not_found_title: "Page non trouvée"
+  error_not_found_content: "Il semble que vous ayez suivi un lien défectueux ou entré une URL qui n'existe pas."
+  error_internal_server_error_title: "Erreur du serveur"
+  error_internal_server_error_content: "Désolé, une erreur interne est survenue."
+  error_back_to_site: "Retour au site"
+
   activerecord:
     models:
       contact: 'Contact'

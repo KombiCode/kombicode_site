@@ -1,3 +1,43 @@
-<h1>Errors#internal_server_error</h1>
-<p>Find me in app/views/errors/internal_server_error.html.erb</p>
-<%= link_to "Back", root_path, class: "interest-link inline-block mt-0 mr-4 mb-0 lin" %>
+<!--Modal-->
+<div class="fixed top-0 left-0 flex items-center justify-center w-full h-full opacity-0 pointer-events-none modal">
+  <div class="absolute w-full h-full opacity-100 errormodal-back modal-overlay"></div>
+  
+  <div class="z-50 w-11/12 mx-auto overflow-y-auto rounded shadow-lg errormodal-content modal-container md:max-w-md">
+    
+
+    <!-- Add margin if you want to see some of the overlay behind the modal-->
+    <div class="px-6 py-4 text-left modal-content">
+      <!--Title-->
+      <div class="flex items-center justify-between pb-3">
+        <p class="text-2xl font-bold"><%= t('error_internal_server_error_title') %></p>
+      </div>
+
+      <!--Body-->
+      <p><%= t('error_internal_server_error_content') %></p>
+
+      <!--Footer-->
+      <div class="flex items-center pt-2 ">
+        <i class="fas fa-angle-left"></i>
+        <p>&nbsp;&nbsp;</p>
+        <%= link_to "/", class: "logo w-10 animate-pulse" do %>
+          <%= cl_image_tag "https://res.cloudinary.com/dyeuxstgg/image/upload/v1626885908/KombiCode/logo_192_gokswj.svg" %>
+        <% end %>
+        <p>&nbsp;&nbsp;<%= t('error_back_to_site') %></p>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  
+  function toggleModal () {
+    const body = document.querySelector('body')
+    const modal = document.querySelector('.modal')
+    modal.classList.toggle('opacity-0')
+    modal.classList.toggle('pointer-events-none')
+    body.classList.toggle('modal-active')
+  }
+  
+  toggleModal();
+</script>

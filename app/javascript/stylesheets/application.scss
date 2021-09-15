@@ -20,4 +20,12 @@ body {
   color: rgba(55, 65, 81, var(--tw-text-opacity));
 }
 
-// body > header > nav > div.flex.flex-row.items-center.justify-end.mt-0.mr-10.text-right > div > div > div > div > div > i
+.errormodal-back {
+  background-color: $kombi-kansasrot;
+}
+
+.errormodal-content {
+  font-family: 'Roboto Slab';
+  color: $kombi-pastelweiss;
+  background-color: black;
+}

@@ -41,6 +41,12 @@ en:
   send_message: "Send message"
   cancel: "Cancel"
 
+  error_not_found_title: "Page not found"
+  error_not_found_content: "Looks like you've followed a broken link or entered a URL that doesn't exist on this site."
+  error_internal_server_error_title: "Server error"
+  error_internal_server_error_content: "Sorry, but something went wrong."
+  error_back_to_site: "Back to the site"
+
   activerecord:
     models:
       contact: 'Contact'

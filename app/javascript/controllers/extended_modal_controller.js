@@ -2,7 +2,6 @@ import { Modal } from "tailwindcss-stimulus-components"
 
 export default class ExtendedModal extends Modal {
   static targets = ["form", "errors", "mainform", "mainerrors"];
-  static values = { from: Number }
 
   connect() {
     super.connect();

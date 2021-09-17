@@ -10,8 +10,7 @@
     <div class="flex flex-row items-center justify-end mt-0 mr-10 text-right">
       <%= turbo_frame_tag 'contact_modal' %>
       <div class="flex-grow" data-controller="extended-modal"
-           data-extended-modal-prevent-default-action-opening="false"
-           data-extended-modal-from-value="11" >
+           data-extended-modal-prevent-default-action-opening="false">
         <%= render 'contacts/modal'%>
         <i class="fas fa-arrow-right"></i>
         <%= link_to "thierry.jet@kombicode.com", new_contact_path("navbar"), class: "animate-pulse navbar-text inline-block mt-0 mr-4 mb-0 lin", data: { action: "click->extended-modal#open", 'turbo-frame': 'contact_modal' } %>

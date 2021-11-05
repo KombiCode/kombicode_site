@@ -72,3 +72,5 @@ gem 'rails_admin'
 gem 'rails_admin-i18n'
 # Postmark
 gem 'postmark-rails'
+# Inline SVG
+gem 'inline_svg'

@@ -43,6 +43,7 @@ en:
   cancel: "Cancel"
   credit_photo: "Photo made with 🧡 by pixtelling"
   alttext_photo: "Thierry Jet, Ruby on Rails independent developer at KombiCode"
+  alttext_logo : "KombiCode, Ruby on Rails Web and mobile development"
 
   message_sent: "Your message was successfully sent."
 

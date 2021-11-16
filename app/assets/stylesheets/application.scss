@@ -5,8 +5,6 @@
 @import "components/index";
 
 // Fontawesome
-@import "font-awesome-sprockets";
-@import "font-awesome";
 $fa-font-path: 'fafonts';
 @import "@fortawesome/fontawesome-free/scss/fontawesome";
 @import "@fortawesome/fontawesome-free/scss/brands";

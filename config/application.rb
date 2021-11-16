@@ -29,5 +29,9 @@ module KombicodeSite
     config.i18n.default_locale = :en
 
     config.active_model.i18n_customize_full_message = true
+
+    config.assets.configure do |env|
+      env.export_concurrent = false
+    end
   end
 end

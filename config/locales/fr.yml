@@ -12,6 +12,7 @@ fr:
   cancel: "Annuler"
   credit_photo: "Photo réalisée avec 🧡 par pixtelling"
   alttext_photo: "Thierry Jet, développeur Ruby on Rails en freelance pour KombiCode"
+  alttext_logo : "KombiCode, développement Web et mobile Ruby on Rails"
 
   message_sent: "Votre message a été correctement envoyé."
 

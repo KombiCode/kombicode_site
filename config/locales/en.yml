@@ -42,6 +42,7 @@ en:
   send_message: "Send message"
   cancel: "Cancel"
   credit_photo: "Photo made with 🧡 by pixtelling"
+  alttext_photo: "Thierry Jet, Ruby on Rails independent developer at KombiCode"
 
   message_sent: "Your message was successfully sent."
 

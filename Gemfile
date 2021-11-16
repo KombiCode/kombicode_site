@@ -56,6 +56,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.8', '>= 4.8.0'
 gem 'friendly_id', '~> 5.4', '>= 5.4.1'
 gem 'name_of_person', '~> 1.1', '>= 1.1.1'
+gem 'font-awesome-sass', '~> 5.15.1'
 gem 'image_processing'
 gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'sidekiq', '~> 6.2'

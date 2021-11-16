@@ -84,3 +84,9 @@ production:
   database: kombicode_site_production
   username: kombicode_site
   password: <%= ENV['KOMBICODE_SITE_DATABASE_PASSWORD'] %>
+
+staging:
+  <<: *default
+  database: kombicode_site_staging
+  username: kombicode_site
+  password: <%= ENV['KOMBICODE_SITE_DATABASE_PASSWORD'] %>

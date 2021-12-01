@@ -74,3 +74,5 @@ gem 'rails_admin-i18n'
 gem 'postmark-rails'
 # Inline SVG
 gem 'inline_svg'
+# RoR vs Wild
+gem "rorvswild"

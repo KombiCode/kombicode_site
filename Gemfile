@@ -76,3 +76,5 @@ gem 'postmark-rails'
 gem 'inline_svg'
 # RoR vs Wild
 gem "rorvswild"
+
+gem 'dotenv-rails', groups: [:development, :test]

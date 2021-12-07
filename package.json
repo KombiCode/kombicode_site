@@ -20,6 +20,9 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/plugin-proposal-private-methods": "^7.16.0",
+    "@babel/plugin-proposal-private-property-in-object": "^7.16.0",
     "webpack-dev-server": "^4.6.0"
   }
 }

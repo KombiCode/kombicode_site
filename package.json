@@ -9,6 +9,8 @@
     "@rails/ujs": "^6.1.4-1",
     "@rails/webpacker": "5.4.3",
     "autoprefixer": "^10.4.0",
+    "glob-parent": "^6.0.2",
+    "nth-check": "^2.0.1",
     "postcss": "^8.4.4",
     "stimulus": "^3.0.1",
     "tailwindcss": "^2.2.19",

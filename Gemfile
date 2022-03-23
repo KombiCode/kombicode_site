@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.2'
+ruby "3.0.3"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 6.1.4.1'
+gem "rails", "~> 7.0.2.3"
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 # Use Puma as the app server
@@ -62,7 +62,7 @@ gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'sidekiq', '~> 6.2'
 gem 'sitemap_generator', '~> 6.1', '>= 6.1.2'
 gem 'whenever', require: false
-gem 'view_component', require: 'view_component/engine'
+gem 'view_component'
 gem 'hotwire-rails'
 
 # Cloudinary

@@ -80,3 +80,5 @@ gem "rorvswild"
 gem 'dotenv-rails', groups: [:development, :test]
 
 gem "nokogiri", ">= 1.12.5"
+
+gem 'invisible_captcha'

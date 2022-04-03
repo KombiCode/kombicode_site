@@ -132,6 +132,8 @@ GEM
     inline_svg (1.8.0)
       activesupport (>= 3.0)
       nokogiri (>= 1.6)
+    invisible_captcha (2.0.0)
+      rails (>= 5.0)
     io-wait (0.2.1)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
@@ -348,6 +350,7 @@ DEPENDENCIES
   hotwire-rails
   image_processing
   inline_svg
+  invisible_captcha
   jbuilder (~> 2.7)
   listen (~> 3.3)
   mini_magick (~> 4.10, >= 4.10.1)

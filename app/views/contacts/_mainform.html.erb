@@ -1,5 +1,6 @@
 <%= form_with(model: @contact, id: "contact_main_form", data: { extended_modal_target: 'mainform' }) do |form| %>
   <div class="px-4 pt-1 pb-4 sm:pt-5 sm:p-6 sm:pb-4">
+    <%= form.invisible_captcha :subtitle %>
     <% if @contact.errors.any? %>
       <div class="p-4 text-xs border border-red-600 sm:text-base" data-extended-modal-target="errors">
         <ul>
